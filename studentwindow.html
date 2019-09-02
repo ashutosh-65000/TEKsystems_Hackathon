@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome Student</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="font-awesome.css">
+	<meta name="viewport" content="width=device-width,inital-scale=1.0">
+	<script src="jquery-3.3.1.slim.min.js"></script>
+	<script src="popper.min.js"></script>
+	<script src="bootstrap.min.js"></script>
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="index.jsp"><img src="logo.jpg" class="logo"> BDS</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="admin-login.jsp" style="font-size: 30px;"> Welcome to Ummedon ke Pankh,Student</a>
+      </li>
+    </ul>
+    <a href="admin-logout.jsp" class="btn btn-warning" role="button">Log Out</a>
+  </div>
+</nav>
+<div class="container-fluid adminwindowback adminwindowback2">
+	<div class="container-fluid adminwindowblack">
+        <div class="row">
+			<div class="col-sm-3 adminwindowcol">
+				<button class="btn btn-success" data-toggle="collapse" data-target="#demo">Donation Meter</button>
+
+					<div id="demo" class="collapse">
+					<span style="color:white;">Now get goodies and cash rewards on successful donation of 25 and more books.<br>
+					Your donation meter progress in mentioned on the right side.</span>
+					</div>
+			</div>
+			<div class="col-sm-6 adminwindowcol">
+				<h1>Total Books Submitted: number from database here</h1>
+			</div>
+			<div class="col-sm-3 progressbar">
+				<h4>Donation Target Progress</h4>
+				<div class="progress">
+				  <div class="progress-bar bg-success" style="width:20%">20%</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-2 adminwindowcol"></div>
+			<div class="col-sm-8 adminwindowcol">
+				<h3>Submit Book</h3>
+				<form action="">
+					<h5>Enter name of the book:</h5>
+					<input type="text" name="nob"><br><br>
+					<h5>Select Subject:</h5>
+					<select name="subjlist">
+						<option>Data Structures</option>
+						<option>DBMS</option>
+						<option>Computer Networks</option>
+						<option>Operating System</option>
+						<option>DAA</option>
+					</select><br><br>
+					<input type="submit" name="submit" value="Submit" style="background: #3fc73ffa;border: green;padding: 5px;border-radius:20%;">
+              <input type="reset" name="reset" value="Reset" style="background: #fd1515fa;border: red;padding: 5px;border-radius: 20%;">
+				</form>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-2 adminwindowcol"></div>
+			<div class="col-sm-8 adminwindowcol">
+				<h3>Subject wise count of submitted books</h3>
+				<table class="contenttable">
+					<tr>
+						<th>S.no</th>
+						<th>Subject</th>
+						<th>Count</th>
+					</tr>
+					<tr>
+						<td>1.</td>
+						<td>DS</td>
+						<td>5</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		</div>
+	</div>
+</div>
+</body>
+<footer>
+	<div class="row foot">
+		<div class="col-sm-4"></div>
+		<div class="col-sm-4">
+			<h3>Follow Us : 
+		<i class="fa fa-facebook-official" aria-hidden="true"></i>
+		<i class="fa fa-twitter" aria-hidden="true"></i>
+		<i class="fa fa-instagram" aria-hidden="true"></i></h3>
+		</div>
+ 		<div class="col-sm-4"></div>
+	</div>
+	<div class="row foot">
+		<div class="col-sm-4"></div>
+		<div class="col-sm-4">
+			<h6>Copyright<i class="fa fa-copyright" aria-hidden="true"></i> 2019 UKP.All Rights Reserved</h6> 
+		</div>
+ 		<div class="col-sm-4"></div>
+	</div>
+</footer>
+</html>

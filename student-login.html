@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="font-awesome.css">
+	<meta name="viewport" content="width=device-width,inital-scale=1.0">
+	<script src="jquery-3.3.1.slim.min.js"></script>
+	<script src="popper.min.js"></script>
+	<script src="bootstrap.min.js"></script>
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="index.html"><img src="logo.jpg" class="logo"> UKP</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="admin-login.html">Admin</a>
+      </li>
+      <li class="nav-item dropdown active">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Student
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="student-login.jsp">Login</a>
+          <a class="dropdown-item" href="student-registeration.jsp">Registeration</a>
+        </div>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+<div class="container-fluid">
+	<div class="row loginbox">
+    <div class="col-sm-4"></div>
+		<div class="col-sm-4"> 
+      <h2 class="logintop"><i class="fa fa-sign-in" aria-hidden="true"><Strong> Student Log In </strong></i></h2>
+      <p class="logininput"><input type="text" name="Email" placeholder="Email" class="logininputbox"><br>
+      <input type="password" name="pass" placeholder="Password" class="logininputbox"><br>
+	    <input type="submit" value="Login" style="background: #3fc73ffa;border: green;padding: 5px;border-radius: 20%;"><br><br>
+      <input type="reset" value="Clear" style="background: #fd1515fa;border: red;padding: 5px;border-radius: 20%;"><br><br>
+      <button class="btn btn-danger">Forgot Password</button>
+		</div>
+        <div class="col-sm-4"> 
+
+        </div>
+    <div class="col-sm-2"></div>
+	</div>
+</div>
+</body>
+<footer>
+  <div class="row foot">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4">
+      <h3>Follow Us : 
+    <i class="fa fa-facebook-official" aria-hidden="true"></i>
+    <i class="fa fa-twitter" aria-hidden="true"></i>
+    <i class="fa fa-instagram" aria-hidden="true"></i></h3>
+    </div>
+    <div class="col-sm-4"></div>
+  </div>
+  <div class="row foot">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4">
+      <h6>Copyright<i class="fa fa-copyright" aria-hidden="true"></i> 2019 UKP.All Rights Reserved</h6> 
+    </div>
+    <div class="col-sm-4"></div>
+  </div>
+</footer>
+</html>
