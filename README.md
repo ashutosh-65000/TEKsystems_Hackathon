@@ -20,18 +20,18 @@ Make the following changes in the src/java/reset.java file:
 # Libraries/Jar Required
 This are the following libraries/jar used:
 
-# JAVA EE Librarires
+**JAVA EE Librarires**
  * javax.servlet.*
  * java.sql.*
  * java.mail.*
  * java.io.*
  * java.util.HashMap
  
-# Required JAR Files
+**Required JAR Files**
   * [ojdbc6.jar] for database connectivity to oracle11g
   * [mail.jar] for sending mails over smtp
   
-# Server Used
+**Server Used**
   * Apache Tomcat 8.0.27.0
 
 # Roles of Team Members
