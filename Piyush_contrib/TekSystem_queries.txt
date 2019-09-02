@@ -1,0 +1,23 @@
+Next three queries are to check user, validate user and insert user if not already present, already present 
+condition is verified using Triggers -
+
+SELECT * FROM USERS WHERE EMAIL=? AND PASS=?
+SELECT * FROM USERS WHERE EMAIL=?
+INSERT INTO USERS (EMAIL, MOBILE, PASS, NAME, AGE) VALUES (?,?,?,?,?)
+
+Next three queries are insert books in stock , check if book is present in stock and update stocks count of each 
+book in BOOKS table in our database -
+INSERT INTO BOOKS (BOOKNAME, STOCK) VALUES (?,?)
+SELECT * FROM BOOKS WHERE BOOKNAME=?
+UPDATE BOOKS SET STOCK = STOCK+? WHERE BID=?
+
+
+Insert books in Warehouse, check how many Books are donated by a particular given User, check how many books are donated by a particular User - 
+
+INSERT INTO WAREHOUSE(BOOKNAME, BID, USERID, QUANTITY) VALUES (?,?,?,?)
+SELECT SUM(QUANTITY) FROM WAREHOUSE WHERE USERID=?
+SELECT BOOKNAME,SUM(QUANTITY) FROM WAREHOUSE WHERE USERID=? GROUP BY BOOKNAME
+
+Next two queries are to select all rows from books and find total number of books in stocks -
+SELECT * FROM BOOKS
+SELECT SUM(STOCKS) FROM BOOKS

@@ -1,0 +1,113 @@
+TABLES-
+
+CREATE table "USERS" (
+    "USERID"     NUMBER NOT NULL,
+    "EMAIL"      VARCHAR2(75),
+    "NAME"       VARCHAR2(30),
+    "MOBILE"     NUMBER(10) NOT NULL,
+    "AGE"        NUMBER(3),
+    "PASS"       VARCHAR2(16),
+    constraint  "USERS_PK" primary key ("USERID")
+)
+/
+
+CREATE sequence "USERS_SEQ" 
+/
+
+CREATE trigger "BI_USERS"  
+  before insert on "USERS"              
+  for each row 
+begin  
+  if :NEW."USERID" is null then
+    select "USERS_SEQ".nextval into :NEW."USERID" from dual;
+  end if;
+end;
+/   
+
+
+
+
+
+
+CREATE table "BOOKS" (
+    "BID"        NUMBER NOT NULL,
+    "BOOKNAME"   VARCHAR2(50),
+    "QUANTITY"   NUMBER,
+    constraint  "BOOKS_PK" primary key ("BID")
+)
+/
+
+CREATE sequence "BOOKS_SEQ" 
+/
+
+CREATE trigger "BI_BOOKS"  
+  before insert on "BOOKS"              
+  for each row 
+begin  
+  if :NEW."BID" is null then
+    select "BOOKS_SEQ".nextval into :NEW."BID" from dual;
+  end if;
+end;
+/   
+
+
+
+
+
+
+CREATE table "WAREHOUSE" (
+    "BID"        NUMBER NOT NULL,
+    "BOOKNAME"   VARCHAR2(50) NOT NULL,
+    "QUANTITY"   NUMBER NOT NULL,
+    "USERID"     NUMBER NOT NULL,
+    "INSERT_ID"  NUMBER NOT NULL,
+    constraint  "WAREHOUSE_PK" primary key ("INSERT_ID")
+)
+/
+
+CREATE sequence "WAREHOUSE_SEQ" 
+/
+
+CREATE trigger "BI_WAREHOUSE"  
+  before insert on "WAREHOUSE"              
+  for each row 
+begin  
+  if :NEW."INSERT_ID" is null then
+    select "WAREHOUSE_SEQ".nextval into :NEW."INSERT_ID" from dual;
+  end if;
+end;
+/   
+
+ALTER TABLE "WAREHOUSE" ADD CONSTRAINT "WAREHOUSE_FK" 
+FOREIGN KEY ("BID")
+REFERENCES "BOOKS" ("BID")
+
+/
+ALTER TABLE "WAREHOUSE" ADD CONSTRAINT "WAREHOUSE_FK2" 
+FOREIGN KEY ("USERID")
+REFERENCES "USERS" ("USERID")
+
+/
+
+
+CREATE sequence "name" 
+/
+
+CREATE trigger "BI_WAREHOUSE"  
+  before insert on "WAREHOUSE"              
+  for each row 
+begin  
+  if :NEW."INSERT_ID" is null then
+    select "name".nextval into :NEW."INSERT_ID" from dual;
+  end if;
+
+
+
+
+
+
+
+
+QUERIES- 
+
+
