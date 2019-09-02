@@ -1,0 +1,18 @@
+Steps to create exe from jar :-
+
+	- make sure lib folder is separate from the jar file (not in parallel to jar file) -
+	- make a library folder and put lib files in it
+	- install launch4j s/w
+	- in launch4j at output file give the destination and name for the output exe
+	- give the sourcepath of jar file
+	- under the menu of JRE - give Min JRE version - 1.6.0 (we can bind the jdk with it too but this will make the software unecessary heavy)
+	- click on 4th icon of launch4j - Build Wrapper
+	- in the open window give the name of output and destination of the same folder as "dist"
+	Note: but the s/w will not work bcoz lib is still separated
+	- so now make use of innosetup(install it) s/w 
+	Note : up till now we don't have the setup of our s/w
+	- now create setup by clicking new software and give the credentials
+	- in the next setup make sure 2 points that are - give source of exe file
+							- make sure to add folder of library under heading of add folders
+	- follow the next steps accordingly - like if want to add some license agreement which must be agreed before installation, etc
+	Note: setup is made and we can now delete the other files now but still we manually need to create database bcoz we are giving the java project setup not database ofcourse
