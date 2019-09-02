@@ -23,7 +23,7 @@ java.util.HashMap
 1. Ashutosh Srivastava  - Backend Development
 2. Satyam Tewari        - Backend Development
 3. Pranjal Singh        - Front-end  Designing
-4. Piyush Tiwari        - Dataabase Handling
+4. Piyush Tiwari        - Database Handling
 
 **Resources**
  * [GitHub Forums](https://github.community/)
