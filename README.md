@@ -18,6 +18,12 @@ java.util.HashMap
   
 **Server Used**
   *Apache Tomcat 8.0.27.0
+  
+  **Front end Technologies Used**
+HTML
+CSS 
+Bootsrap
+JavaScript
 
 **Roles of Team Members**
 1. Ashutosh Srivastava  - Backend Development
